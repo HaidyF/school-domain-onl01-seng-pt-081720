@@ -6,9 +6,16 @@ class School
     @roster= {}
   end
   def add_student=(student, level)
-    @add_student=add_student
-    @level = level
+    roster[level] ||= []
+    roster[level] << student
   end
+
+  def grade(level)
+    roster.detect do |x, y|
+      if x == level
+        return y
+      end
+    end 
 
 end
 school = School.new("Bayside High School")
