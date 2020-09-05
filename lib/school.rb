@@ -15,4 +15,4 @@ class School
 
 end
 school = School.new("Bayside High School")
-School.add_student("Zach Morris", 9)
+school.add_student("Zach Morris", 9)
